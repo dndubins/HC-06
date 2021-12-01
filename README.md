@@ -1,4 +1,4 @@
-# HC-06
+# HC-06 Bluetooth Module
 Bluetooth Communications Made Simple!
 
 •	Connect the HT-06 module to your Uno using the following circuit diagram:
