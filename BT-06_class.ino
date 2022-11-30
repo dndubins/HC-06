@@ -17,7 +17,8 @@ STATE: NC
 
 #include <SoftwareSerial.h>
 SoftwareSerial SerialBT (2,3); // RX, TX
-String deviceName="myDevice";  // Enter new device name here
+String deviceName="myDevice               ";  // Enter new device name here.
+                                              // Trailing spaces delete previous name.
 
 void setup(){
   Serial.begin(9600);   // start Serial Monitor
@@ -26,6 +27,7 @@ void setup(){
   sendAT("AT",1000); // send "AT", then wait 1 sec
   Serial.println("Changing device name to: "+deviceName);
   sendAT("AT+NAME"+deviceName,1000); // change device name
+  sendAT("AT+NAME",1000); // repeat back device name
 }
 
 void loop(){
