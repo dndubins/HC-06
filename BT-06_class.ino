@@ -1,7 +1,7 @@
 /* BC-06_class Example Bluetooth Communications Sketch (change device name, report number)
 Author: D. Dubins
-Date: 01-Dec-21
-Note: Make sure device is not connected to Bluetooth to another device (AT mode)
+Date: 01-Dec-21. Last edited: 30-Nov-22.
+Note: Make sure device is not connected to Bluetooth to another device (AT mode, light flashing)
 
 Connections:
 ------------
