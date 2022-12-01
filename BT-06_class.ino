@@ -17,8 +17,8 @@ STATE: NC
 
 #include <SoftwareSerial.h>
 SoftwareSerial SerialBT (2,3); // RX, TX
-String deviceName="myDevice               ";  // Enter new device name here.
-                                              // Trailing spaces delete previous name.
+String deviceName="myDevice ";    // Enter new device name here.
+                                  // Trailing spaces delete previous name.
 
 void setup(){
   Serial.begin(9600);   // start Serial Monitor
