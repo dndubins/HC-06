@@ -27,7 +27,6 @@ void setup(){
   sendAT("AT",1000); // send "AT", then wait 1 sec
   Serial.println("Changing device name to: "+deviceName);
   sendAT("AT+NAME"+deviceName,1000); // change device name
-  sendAT("AT+NAME",1000); // repeat back device name
 }
 
 void loop(){
