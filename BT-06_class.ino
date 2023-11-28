@@ -27,6 +27,8 @@ void setup(){
   SerialBT.begin(9600); // start Serial Bluetooth
   Serial.println("Ready to send AT commands.");
   sendAT("AT",1000); // send "AT", then wait 1 sec
+  Serial.println("Current device name: ");
+  sendAT("AT+NAME",1000); // this will print the current name
   if(CHANGENAME){
     Serial.println("Changing device name to: "+deviceName);
     sendAT("AT+NAME"+deviceName,1000); // change device name
