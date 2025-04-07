@@ -26,27 +26,27 @@ void setup(){
   Serial.println("Ready to send AT commands.");
   sendAT("AT",1000); // send "AT", then wait 1 sec
   Serial.println("Current device name: ");
-  sendAT("AT+NAME",1000); // this will print the current name
+  sendAT("AT+NAME",1000); // this will print current name
 }
 
 void loop(){
-  // Modify this sketch to output pH or weight to your bluetooth device,
-  // instead of the reading on pin A1.
-  int reading=analogRead(A1); //take analog reading from pin A1
-  Serial.println(reading);  //print reading to serial monitor
-  SerialBT.println(reading); //print reading to bluetooth device!
+  // Modify this sketch to output pH or weight to your
+  // bluetooth device, instead of the reading on pin A1.
+  int reading=analogRead(A1); //read pin A1
+  Serial.println(reading);  //print to Serial Monitor
+  SerialBT.println(reading); //print to Bluetooth device
   delay(500); //short delay
 }
 
 void sendAT(String command, int msec){
   Serial.println("SENT: "+command);
-  //SerialBT.print(command);          // send AT command to HC-06
-  SerialBT.print(command+"\r\n"); // send AT command to BT-06
-  delay(msec);                      // wait msec
-  String rcv="";                    // to hold received string
-  while(SerialBT.available()){      // print response
+  //SerialBT.print(command);    // send AT cmd to HC-06
+  SerialBT.print(command+"\r\n");// send AT cmdd to BT-06
+  delay(msec);                    // wait msec
+  String rcv="";                  // to hold received data
+  while(SerialBT.available()){    // print response
     char c=SerialBT.read();
-    if(c>=' '&&c<='~')rcv+=c; // filter for printable characters
+    if(c>=' '&&c<='~')rcv+=c;     // store printable chars
   }
-  Serial.println("RECEIVED: "+rcv);  // output received string
+  Serial.println("RECEIVED: "+rcv); // output received data
 }
