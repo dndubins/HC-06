@@ -1,6 +1,6 @@
 /* BC-06_class Example Bluetooth Communications Sketch (change device name, report number)
 Author: D. Dubins
-Date: 01-Dec-21. Last edited: 27-Nov-23.
+Date: 01-Dec-21. Last edited: 07-Apr-25.
 Note: Make sure device is not connected to Bluetooth to another device (AT mode, light flashing)
 
 Connections:
@@ -15,12 +15,8 @@ STATE: NC
 (Uno Pin 3 is level shifted to 3.3V)
 */
 
-#define CHANGENAME false      // make this true to change bluetooth name
-
 #include <SoftwareSerial.h>
 SoftwareSerial SerialBT (2,3); // RX, TX
-String deviceName="myDevice   ";    // Enter new device name here.
-                                    // Trailing spaces delete previous name.
 
 void setup(){
   Serial.begin(9600);   // start Serial Monitor
@@ -29,10 +25,6 @@ void setup(){
   sendAT("AT",1000); // send "AT", then wait 1 sec
   Serial.println("Current device name: ");
   sendAT("AT+NAME",1000); // this will print the current name
-  if(CHANGENAME){
-    Serial.println("Changing device name to: "+deviceName);
-    sendAT("AT+NAME"+deviceName,1000); // change device name
-  }
 }
 
 void loop(){
