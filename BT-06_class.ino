@@ -1,4 +1,4 @@
-/* BC-06_class Example Bluetooth Communications Sketch (change device name, report number)
+/* BC-06_class Example Bluetooth Communications Sketch (report device name, report number)
 Author: D. Dubins
 Date: 01-Dec-21. Last edited: 07-Apr-25.
 Note: Make sure device is not connected to Bluetooth to another device (AT mode, light flashing)
