@@ -1,7 +1,9 @@
-/* BT-06_class Example Bluetooth Communications Sketch (report device name, report number)
+/* BT-06_class.ino: Example Bluetooth Communications Sketch 
+(report device name, report number)
 Author: D. Dubins
 Date: 01-Dec-21. Last edited: 07-Apr-25.
-Note: Make sure device is not connected to Bluetooth to another device (AT mode, light flashing)
+Note: Make sure device is not connected to Bluetooth to another device
+(AT mode, light flashing)
 
 Connections:
 ------------
