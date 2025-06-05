@@ -1,4 +1,4 @@
-//8-7.ino: Scanning HC-06, BT-06, HC-05 for baud rate, using AT command
+//baudScan.ino: Scanning HC-06, BT-06, HC-05 for baud rate, using AT command
 //Scans bluetooth device for current baud rate.
 //Author: D. Dubins
 //Date: 05-Jun-25
