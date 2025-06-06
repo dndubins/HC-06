@@ -2,6 +2,7 @@
 //Note: For HC-06, set Serial Monitor to "Both NL & CR".
 //For BT-06, set Serial Monitor to "No Line Ending".
 //Note: For HC-05, hold down SW while powering up to enter AT mode.
+//      LED will flash slowly when in AT mode.
 //
 //Connections: 
 //------------
